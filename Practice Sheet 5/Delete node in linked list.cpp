@@ -9,11 +9,6 @@ public:
     int data;
     Node* next;
 };
- 
-// Given a reference (pointer to pointer)
-// to the head of a list and an int,
-// inserts a new node on the front of the
-// list.
 void push(Node** head_ref, int new_data)
 {
     Node* new_node = new Node();
@@ -21,10 +16,6 @@ void push(Node** head_ref, int new_data)
     new_node->next = (*head_ref);
     (*head_ref) = new_node;
 }
- 
-// Given a reference (pointer to pointer)
-// to the head of a list and a key, deletes
-// the first occurrence of key in linked list
 void deleteNode(Node** head_ref, int key)
 {
      
@@ -40,10 +31,6 @@ void deleteNode(Node** head_ref, int key)
         delete temp;            // free old head
         return;
     }
- 
-    // Else Search for the key to be deleted,
-    // keep track of the previous node as we
-    // need to change 'prev->next' */
       else
     {
     while (temp != NULL && temp->data != key)
@@ -64,9 +51,6 @@ void deleteNode(Node** head_ref, int key)
     }
 }
  
-// This function prints contents of
-// linked list starting from the
-// given node
 void printList(Node* node)
 {
     while (node != NULL)
